@@ -6,9 +6,16 @@ import { scrypt } from 'scrypt-js';
 
 import getSaltFromEmail from '../../utils/getSaltFromEmail';
 
-const privateKey = fs.readFileSync(
-  path.resolve(__dirname, '..', '..', '..', 'jwt-private-key.pem'),
-);
+const privateKey = (() => {
+  console.info(process.env);
+  if (process.env.JWT_PRIVATE_KEY) {
+    return Buffer.from(process.env.JWT_PRIVATE_KEY, 'base64');
+  }
+
+  return fs.readFileSync(
+    path.resolve(__dirname, '..', '..', '..', 'jwt-private-key.pem'),
+  );
+})();
 
 const login = async (_, { email, password, hashed = false }) => {
   email = email.toLowerCase();

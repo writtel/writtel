@@ -3,7 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import jwt from 'jsonwebtoken';
 
-const publicKey = fs.readFileSync(path.resolve(__dirname, '..', 'jwt-public-key.pem'));
+const publicKey = (() => {
+  if (process.env.JWT_PUBLIC_KEY) {
+    return Buffer.from(process.env.JWT_PUBLIC_KEY, 'base64');
+  }
+
+  return fs.readFileSync(path.resolve(__dirname, '..', 'jwt-public-key.pem'));
+})();
 
 const verifyToken = async (authorization) => {
   if (!authorization) {
