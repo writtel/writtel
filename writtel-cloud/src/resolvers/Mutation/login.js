@@ -7,7 +7,6 @@ import { scrypt } from 'scrypt-js';
 import getSaltFromEmail from '../../utils/getSaltFromEmail';
 
 const privateKey = (() => {
-  console.info(process.env);
   if (process.env.JWT_PRIVATE_KEY) {
     return Buffer.from(process.env.JWT_PRIVATE_KEY, 'base64');
   }
