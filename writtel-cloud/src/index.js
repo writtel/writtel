@@ -9,7 +9,7 @@ import context from './context';
 import logger from './utils/logger';
 
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
