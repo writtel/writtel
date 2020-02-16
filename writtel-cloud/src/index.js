@@ -16,6 +16,15 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017', {
 
 const app = express();
 
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production' && req.get('X-Forwarded-Proto') !== 'https') {
+    res.redirect(`https://${req.get('Host')}${req.originalUrl}`);
+    return;
+  }
+
+  next();
+});
+
 const jsonParsers = [
   express.json({ limit: '16kb' }),
   express.json({ limit: '10mb' }),
