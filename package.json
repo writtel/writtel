@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "writtel-cli-utils",
+    "writtel-cloud",
+    "writtel-opulent-theme",
+    "writtel-server",
+    "writtel-wp-importer"
+  ]
+}

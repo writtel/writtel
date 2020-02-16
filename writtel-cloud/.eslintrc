@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "no-cond-assign": "off",
+    "no-plusplus": "off",
+  }
+}

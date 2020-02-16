@@ -1,0 +1,12 @@
+{
+  "presets": ["@babel/react", "@babel/env"],
+  "plugins": [
+    "@babel/transform-runtime",
+    ["css-modules-transform", {
+      "extensions": [".module.css", ".module.scss"],
+      "generateScopedName": "writtel-[name]-[local]-[hash:base64:5]",
+      "camelCase": "only",
+      "extractCss": "./lib/admin.scss"
+    }]
+  ]
+}

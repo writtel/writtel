@@ -1,0 +1,13 @@
+{
+  "name": "@writtel/cli-utils",
+  "version": "1.0.0",
+  "description": "Writtel CLI Utilities",
+  "author": "Tim Behrsin <tim@behrsin.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "chalk": "3.0.0",
+    "detect-port-alt": "^1.1.6",
+    "glob": "^7.0.0"
+  }
+}

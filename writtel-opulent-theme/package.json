@@ -1,0 +1,21 @@
+{
+  "name": "@writtel/opulent-theme",
+  "version": "1.0.0",
+  "description": "Writtel Opulent Theme",
+  "main": "src/index.js",
+  "repository": "https://github.com/github:writtel/writtel-opulent-theme",
+  "author": "Tim Behrsin <tim@behrsin.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@writtel/server": "^1.0.0",
+    "moment": "^2.24.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "build": "writtel build",
+    "start": "WRITTEL_SITE=timothydiary.org writtel start",
+    "test": "writtel test"
+  }
+}
