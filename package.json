@@ -6,5 +6,12 @@
     "writtel-opulent-theme",
     "writtel-server",
     "writtel-wp-importer"
-  ]
+  ],
+  "scripts": {
+    "build": "npm-run-all build:writtel-cloud",
+    "build:writtel-cloud": "cd writtel-cloud; yarn build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
