@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
+    "build": "babel -d lib/ -D src/",
     "start": "nodemon -x babel-node src/index.js -w src/",
     "generate-keys": "node scripts/generate-keys"
   },
